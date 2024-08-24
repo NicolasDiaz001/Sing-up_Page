@@ -1,0 +1,156 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* ------------------------ */
+:root {
+  --mainColor: #271c14;
+  --secondcolor: #5c4633;
+  --thirdcolor: #92a167
+}
+
+body{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-inline: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: "Libre Franklin",sans-serif;
+  letter-spacing: 1.5rem;
+  padding-left: 20px;
+  color: var(--mainColor);
+}
+
+p{
+  margin-inline: auto;
+  margin-bottom: 30px;
+  font-size: xx-large;
+  color: var(--secondcolor);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.main-container{
+  display: flex;
+}
+
+.img{
+  background-image: url(./img/chameleon1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 800px;
+  min-width: 500px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow:
+      0px 0px 2.9px rgba(0, 0, 0, 0.045),
+      0px 0px 23px rgba(0, 0, 0, 0.11);
+
+}
+
+.input-section{
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  margin-left: 40px;
+  margin-top: 20px;
+  padding-right: 30px
+}
+
+.input-section label{
+  color: var(--mainColor);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.input-section input{
+  border-radius: 20px;
+  border: 0.5px solid var(--secondcolor);
+}
+
+button{
+  margin: 30px auto ;
+  width: max-content;
+  border-radius: 10px;
+  background-color: var(--thirdcolor);
+  color: var(--mainColor);
+  font-size: x-large;
+  border: 1px solid var(--thirdcolor);
+}
+
+button:hover{
+  cursor: pointer;
+  color: var(--thirdcolor);
+  background-color: var(--mainColor);
+}
+
+input:valid {
+  border-color: var(--thirdcolor);
+}
+
+input:invalid {
+  border-color: #f0461b;
+}
